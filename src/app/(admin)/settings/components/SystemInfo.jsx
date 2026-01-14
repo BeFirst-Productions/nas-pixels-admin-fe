@@ -40,9 +40,9 @@ useEffect(() => {
 }, []);
 
   const systemData = {
-    name: "Reback CMS",
+    name: "NAS PIXELS CMS",
     version: "1.0.0",
-    buildDate: "15 Jan 2025",
+    buildDate: "12 Jan 2026",
     environment: "Production",
     apiStatus: "Operational",
     dbStatus: "Connected",

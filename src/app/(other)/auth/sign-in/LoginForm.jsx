@@ -52,7 +52,7 @@ const LoginForm = () => {
        {error&& <span className='text-danger'>{error}</span>}
       </div>
       <div className="mb-1 text-center d-grid">
-        <Button variant="primary" type="submit" disabled={loading}>
+        <Button variant="success" type="submit" disabled={loading}>
           Sign In
         </Button>
       </div>

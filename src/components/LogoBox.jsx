@@ -10,7 +10,7 @@ const LogoBox = ({
   return <div className={containerClassName ?? ''}  >
 <Link to="/" className="logo-dark">
   {/* <img
-    src="/ADL- D.png"
+    src="/NAS-PIXELS-sm-dark-logo.png"
     style={{
           width: 50,
       height: 50,
@@ -19,7 +19,7 @@ const LogoBox = ({
     alt="logo sm"
   /> */}
   <img
-    src="/ADL.png"
+    src="/NAS-PIXELS-logo-dark.png"
     style={{
       width: 100,
       height: 100,
@@ -31,7 +31,7 @@ const LogoBox = ({
 
 <Link to="/" className="logo-light">
   {/* <img
-    src="/ADL- D.png"
+    src="/NAS-PIXELS-sm-light-logo.png"
     style={{
       width: 50,
       height: 50,
@@ -40,7 +40,7 @@ const LogoBox = ({
     alt="logo sm"
   /> */}
   <img
-    src="/ADL Business.png"
+    src="/NAS-PIXELS-logo.png"
     style={{
       width: 100,
       height: 100,

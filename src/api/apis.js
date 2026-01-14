@@ -611,3 +611,72 @@ export const getStorageUsage = async () => {
 
 };
 
+//===== Projects =====//
+
+
+export const getProjects = async (params) => {
+  try {
+    const res = await axiosInstance.get("/projects", { params });
+    return res.data;
+  } catch (error) {
+    console.error(
+      "❌ API Error (getProjects):",
+      error.response?.data || error.message
+    );
+    throw error;
+  }
+};
+
+
+export const getProjectById = async (id) => {
+  try {
+    const res = await axiosInstance.get(`/projects/${id}`);
+    return res.data;
+  } catch (error) {
+    console.error("❌ API Error (getProjectById):", error.response?.data || error.message);
+    throw error;
+  }
+};
+
+export const createProject = async (data) => {
+  try {
+    const res = await axiosInstance.post(
+      "/projects/create-project",
+      data
+    );
+    return res.data;
+  } catch (error) {
+    console.error(
+      "❌ API Error (createProject):",
+      error.response?.data || error.message
+    );
+    throw error;
+  }
+};
+
+export const updateProject = async (id, data) => {
+  try {
+    const res = await axiosInstance.put(
+      `/projects/${id}`,
+      data
+    );
+    return res.data;
+  } catch (error) {
+    console.error(
+      "❌ API Error (updateProject):",
+      error.response?.data || error.message
+    );
+    throw error;
+  }
+};
+
+
+export const deleteProject = async (id) => {
+  try {
+    const res = await axiosInstance.delete(`/projects/${id}`);
+    return res.data;
+  } catch (error) {
+    console.error("❌ API Error (deleteProject):", error.response?.data || error.message);
+    throw error;
+  }
+};

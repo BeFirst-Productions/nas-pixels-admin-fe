@@ -4,19 +4,32 @@ import LogoBox from '@/components/LogoBox';
 import PageMetaData from '@/components/PageTitle';
 import ThirdPartyAuth from '@/components/ThirdPartyAuth';
 import LoginForm from './LoginForm';
-import signInImg from '@/assets/images/sign-in.svg';
+import signInImg from '@/assets/images/signin-vector-img.jpg';
 const SignIn = () => {
   return <>
       <PageMetaData title="Sign In" />
 
-      <Card className="auth-card">
+      <Card className="auth-card"     style={{
+        boxShadow: '0 10px 30px rgba(117, 195, 120, 1)',
+        borderRadius: '20px'
+      }}>
         <CardBody className="p-0">
           <Row className="align-items-center g-0">
-            <Col lg={6} className="d-none d-lg-inline-block border-end">
-              <div className="auth-page-sidebar">
-                <img src={signInImg} width={521} height={521} alt="auth" className="img-fluid" />
-              </div>
-            </Col>
+          <Col lg={6} className="d-none d-lg-inline-block border-end">
+  <div className="auth-page-sidebar">
+    <img 
+      src={signInImg} 
+      width={521} 
+      height={521} 
+      alt="auth" 
+      className="img-fluid" 
+      style={{
+        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.15)',
+        borderRadius: '20px'
+      }}
+    />
+  </div>
+</Col>
             <Col lg={6}>
               <div className="p-4">
                 <div className="mx-auto mb-4 text-center auth-logo">

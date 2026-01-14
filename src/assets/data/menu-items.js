@@ -61,15 +61,15 @@ export const MENU_ITEMS = [
   //   icon: 'mdi:message-text-outline',
   //   label: 'Enquiry',
   //   children: [
-  {
-    key: 'enquiry',
-    icon: 'mdi:message-text-outline',
-    label: 'Enquiry',
-    url: '/enquiry',
+  // {
+  //   key: 'enquiry',
+  //   icon: 'mdi:message-text-outline',
+  //   label: 'Enquiry',
+  //   url: '/enquiry',
     // parentKey: 'enquiry'
     // },
     // ]
-  },
+  // },
 
   {
     key: 'apps',
@@ -81,15 +81,15 @@ export const MENU_ITEMS = [
   //   icon: 'mdi:message-text-outline',
   //   label: 'Blogs',
   //   children: [
-  {
-    key: 'herosection',
-    icon: 'mdi:home-outline',
-    label: 'Herosection',
-    url: '/herosection',
+  // {
+  //   key: 'herosection',
+  //   icon: 'mdi:home-outline',
+  //   label: 'Herosection',
+  //   url: '/herosection',
     //     parentKey: 'blogs'
     //   }
     // ]
-  },
+  // },
   {
     key: 'blogs',
     icon: 'mdi:post-outline',
@@ -105,30 +105,36 @@ export const MENU_ITEMS = [
   //   icon: 'mdi:help-circle-outline',
   //   label: 'Faqs',
   //   children: [
-  {
-    key: 'faqs',
-    icon: 'mdi:help-circle-outline',
-    label: 'Faqs',
-    url: '/faqs',
-  },
-  {
-    key: 'gallery',
-    icon: 'mdi:image',
-    label: 'Gallery',
-    url: '/gallery',
-  },
-  {
-    key: 'newsletter',
-    icon: 'mdi:email-newsletter',
-    label: 'Newsletters',
-    url: '/newsletter/subscribers',
-  },
+  // {
+  //   key: 'faqs',
+  //   icon: 'mdi:help-circle-outline',
+  //   label: 'Faqs',
+  //   url: '/faqs',
+  // },
+  // {
+  //   key: 'gallery',
+  //   icon: 'mdi:image',
+  //   label: 'Gallery',
+  //   url: '/gallery',
+  // },
+  // {
+  //   key: 'newsletter',
+  //   icon: 'mdi:email-newsletter',
+  //   label: 'Newsletters',
+  //   url: '/newsletter/subscribers',
+  // },
 
+  // {
+  //   key: 'page-packages',
+  //   icon: 'iconamoon:box-bold',
+  //   label: 'Packages',
+  //   url: '/packages',
+  // },
   {
     key: 'page-packages',
     icon: 'iconamoon:box-bold',
-    label: 'Packages',
-    url: '/packages',
+    label: 'Projects',
+    url: '/projects',
   },
   {
     key: 'apps',
@@ -136,12 +142,12 @@ export const MENU_ITEMS = [
     isTitle: true,
   },
 
-  {
-    key: 'seo',
-    icon: 'mdi:magnify-scan',
-    label: 'Seo',
-    url: '/seo',
-  },
+  // {
+  //   key: 'seo',
+  //   icon: 'mdi:magnify-scan',
+  //   label: 'Seo',
+  //   url: '/seo',
+  // },
   {
     key: 'settings',
     icon: 'mdi:settings-outline',

@@ -7,9 +7,9 @@ import { getAccessToken, setAccessToken, clearAccessToken } from "./tokenService
 const axiosInstance = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
   withCredentials: true, // ✅ REQUIRED for refresh cookie
-  headers: {
-    "Content-Type": "application/json",
-  },
+  // headers: {
+  //   "Content-Type": "application/json",
+  // },
 });
 
 // ===============================

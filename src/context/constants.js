@@ -1,9 +1,9 @@
 export const currency = '$';
 export const currentYear = new Date().getFullYear();
-export const developedByLink = 'https://techzaa.getappui.com/';
+export const developedByLink = 'https://nextmedia.ae/';
 export const developedBy = 'Next Media';
-export const contactUs = 'techzaastudio@gmail.com';
+export const contactUs = 'info.nextdms@gmail.com';
 export const buyLink = '';
 export const basePath = '';
-export const DEFAULT_PAGE_TITLE = 'ADL BUSINESS SOLUTIONS | Responsive Admin Dashboard';
+export const DEFAULT_PAGE_TITLE = 'NAS PIXELS | Responsive Admin Dashboard';
 export const colorVariants = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark', 'purple', 'pink', 'orange', 'light', 'link'];

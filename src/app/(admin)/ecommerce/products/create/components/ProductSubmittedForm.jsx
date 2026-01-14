@@ -1,26 +1,113 @@
 import IconifyIcon from "@/components/wrappers/IconifyIcon";
-import { Col, Row } from "react-bootstrap";
+import { Card, Col, Row, Badge } from "react-bootstrap";
 
 const ProductSubmittedForm = ({ blogData }) => {
-  const imageCount = blogData.image ? 1 : blogData.existingImage ? 1 : 0;
+  const imageSrc = blogData.image
+    ? URL.createObjectURL(blogData.image)
+    : blogData.existingImage || null;
 
   return (
-    <Row className="d-flex justify-content-center">
-      <Col lg={8}>
-        <div className="text-center">
-          <IconifyIcon icon="bx:check-double" className="text-success h2" />
-          <h3 className="mt-0">You're almost done!</h3>
-          <h5 className="w-75 mb-2 mt-3 mx-auto text-muted">
-            Review your blog details and press "Save Blog" to publish.
-          </h5>
+    <Row className="justify-content-center px-2 px-md-0">
+      <Col xs={12} md={11} lg={9}>
+        <Card className="border-0 shadow-sm">
+          <Card.Body className="p-3 p-md-4">
 
-          <div className="text-start mb-3 mt-4">
-            <strong>Title:</strong> {blogData.title || "—"} <br />
-            <strong>Excerpt:</strong> {blogData.excerpt || "—"} <br />
-            <strong>Images:</strong> {imageCount} selected <br />
-            <strong>Meta Title:</strong> {blogData.metaTitle || "—"}
-          </div>
-        </div>
+            {/* Header */}
+            <div className="text-center mb-4">
+              <IconifyIcon
+                icon="bx:check-double"
+                className="text-success mb-2"
+                style={{ fontSize: "2.5rem" }}
+              />
+              <h3 className="fw-bold mb-1 fs-4 fs-md-3">
+                Review & Submit
+              </h3>
+              <p className="text-muted mb-0 fs-6">
+                Please review the blog details below before publishing.
+              </p>
+            </div>
+
+            <Row className="gy-4">
+
+              {/* Blog Image Preview */}
+              <Col xs={12} lg={5}>
+                <div className="border rounded p-3 h-100 text-center">
+                  <h6 className="fw-semibold mb-3">
+                    Featured Image
+                  </h6>
+
+                  {imageSrc ? (
+                    <img
+                      src={imageSrc}
+                      alt="Blog Preview"
+                      className="img-fluid rounded w-100"
+                      style={{
+                        maxHeight: "260px",
+                        objectFit: "cover"
+                      }}
+                    />
+                  ) : (
+                    <div className="text-muted py-5">
+                      No image selected
+                    </div>
+                  )}
+                </div>
+              </Col>
+
+              {/* Blog Summary */}
+              <Col xs={12} lg={7}>
+                <div className="border rounded p-3 h-100">
+                  <h6 className="fw-semibold mb-3">
+                    Blog Summary
+                  </h6>
+
+                  <div className="mb-3">
+                    <strong>Title</strong>
+                    <div className="text-muted text-break">
+                      {blogData.title || "—"}
+                    </div>
+                  </div>
+
+                  <div className="mb-3">
+                    <strong>Excerpt</strong>
+                    <div className="text-muted text-break">
+                      {blogData.excerpt || "—"}
+                    </div>
+                  </div>
+
+                  <div className="mb-3">
+                    <strong>URL</strong>
+                    <div className="text-muted text-break">
+                      /{blogData.url || "—"}
+                    </div>
+                  </div>
+
+                  <div className="mb-3">
+                    <strong>Meta Title</strong>
+                    <div className="text-muted text-break">
+                      {blogData.metaTitle || "—"}
+                    </div>
+                  </div>
+
+                  <div className="mb-3">
+                    <strong>Meta Description</strong>
+                    <div className="text-muted text-break">
+                      {blogData.metaDescription || "—"}
+                    </div>
+                  </div>
+
+                  <div className="mt-3">
+                    <Badge bg="success" className="px-3 py-2">
+                      Ready to Publish
+                    </Badge>
+                  </div>
+                </div>
+              </Col>
+
+            </Row>
+
+          </Card.Body>
+        </Card>
       </Col>
     </Row>
   );
